@@ -48,7 +48,7 @@ export const CartasDeCreditoPagos = () => {
             links={[
               { name: "Operaciones", href: "#" },
               { name: "Cartas de Crédito", href: `${apiHost}/#/operaciones/cartas-de-credito` },
-              { name: "Detalle de Carta", href: "#" },
+              { name: "Detalle de Carta", href: `${apiHost}/#/operaciones/cartas-de-credito/${cartaCreditoDetalle?.Id}` },
               { name: "Pagos", href: "#" },
             ]}
           />

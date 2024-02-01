@@ -180,7 +180,7 @@ export const Compradores = () => {
             <div className="mb-4">
               <Label htmlFor="empresaId" value="Empresa" />
               <Select
-                id="empresaId"
+                id="EmpresaId"
                 required={true}
                 value={empresaId}
                 onChange={(e) => {
@@ -201,7 +201,7 @@ export const Compradores = () => {
             <div className="mb-4">
               <Label htmlFor="tipoPersonaFiscalId" value="Tipo Persona Fiscal" />
               <Select
-                id="tipoPersonaFiscalId"
+                id="TipoPersonaFiscalId"
                 required={true}
                 value={tipoPersonaFiscalId}
                 onChange={(e) => {
