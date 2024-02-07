@@ -186,6 +186,7 @@ export const Compradores = () => {
                 onChange={(e) => {
                   setEmpresaId(Number(e.target.value));
                 }}>
+                <option value={0}>Seleccione opción</option>
                 {catEmpresas
                   ?.filter((d) => d.Activo)
                   .map((item, index) => {
@@ -208,6 +209,7 @@ export const Compradores = () => {
                   console.log(e.target.value);
                   setTipoPersonaFiscalId(Number(e.target.value));
                 }}>
+                <option value={0}>Seleccione opción</option>
                 {catTiposPersonaFiscal
                   ?.filter((d) => d.Activo)
                   .map((item, index) => {

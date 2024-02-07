@@ -274,9 +274,11 @@ export const CartasCreditoEnmiendas = () => {
                 <Label value="Importe de L/C" />
                 <TextInput value={numeral(cartaCreditoDetalle.MontoOriginalLC).format("$ 0,0.00")} disabled />
               </div>
-              <div className="md:col-span-5 md:col-start-7 flex items-center justify-between gap-4">
+              <div className="md:col-span-5 md:col-start-6 flex items-center justify-between gap-4">
                 <Label value="Nuevo Importe de L/C" />
-                <TextInput type="number" {...register("ImporteLC", { setValueAs: (v) => (v === "" ? null : Number(v)) })} readOnly={cartaCreditoDetalle.Estatus === 21} />
+                <div className="w-1/2">
+                  <TextInput type="number" {...register("ImporteLC", { setValueAs: (v) => (v === "" ? null : Number(v)) })} readOnly={cartaCreditoDetalle.Estatus === 21} />
+                </div>
               </div>
             </div>
 
