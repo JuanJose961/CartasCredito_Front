@@ -45,6 +45,11 @@ export const Compradores = () => {
   }, [editId, nombre, descripcion, empresaId, tipoPersonaFiscalId]);
 
   const _handleShowModal = useCallback(() => {
+    setEditId(0);
+    setNombre("");
+    setDescripcion("");
+    setEmpresaId(0);
+    setTipoPersonaFiscalId(0);
     setShowAddForm(true);
   }, [showAddForm]);
 

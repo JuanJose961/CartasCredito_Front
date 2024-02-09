@@ -38,6 +38,10 @@ export const Monedas = () => {
   }, [editId, nombre, descripcion, abbr]);
 
   const _handleShowModal = useCallback(() => {
+    setEditId(0);
+    setNombre("");
+    setDescripcion("");
+    setAbbr("");
     setShowAddForm(true);
   }, [showAddForm]);
 

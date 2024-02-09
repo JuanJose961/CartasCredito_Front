@@ -46,6 +46,11 @@ export const LineasDeCredito = () => {
   }, [editId, bancoId, empresaId, monto, cuenta]);
 
   const _handleShowModal = useCallback(() => {
+    setEditId(0);
+    setBancoId(0);
+    setEmpresaId(0);
+    setMonto(0);
+    setCuenta("");
     setShowAddForm(true);
   }, [showAddForm]);
 

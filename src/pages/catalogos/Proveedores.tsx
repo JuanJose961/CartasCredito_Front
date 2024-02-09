@@ -48,6 +48,17 @@ export const Proveedores = () => {
   const [editId, setEditId] = useState(0);
 
   const _handleShowModal = useCallback(() => {
+    setEditId(0);
+    setValue("Nombre", "");
+    setValue("EmpresaId", 0);
+    setValue("Descripcion", "");
+    setValue("Pais", "");
+    setValue("Contacto.Nombre", "");
+    setValue("Contacto.ApellidoPaterno", "");
+    setValue("Contacto.ApellidoMaterno", "");
+    setValue("Contacto.Telefono", "");
+    setValue("Contacto.Email", "");
+    setValue("Contacto.Fax", "");
     setShowAddForm(true);
   }, [showAddForm]);
 
@@ -179,6 +190,7 @@ export const Proveedores = () => {
 
         <Modal show={showAddForm} size="3xl" onClose={_handleHideModal} dismissible={true}>
           <Modal.Header>Agregar Registro</Modal.Header>
+          <form onSubmit={_handleSubmit}>
           <Modal.Body>
             <div className="md:grid md:grid-cols-12 md:gap-4">
               <div className="md:col-span-6">
@@ -199,16 +211,16 @@ export const Proveedores = () => {
                 </div>
                 <div className="mb-2">
                   <Label htmlFor="nombre" value="Nombre" />
-                  <TextInput defaultValue="" type="text" {...register("Nombre", { required: true })} />
+                  <TextInput id="nombre" defaultValue="" type="text" required={true} {...register("Nombre")} />
                 </div>
               </div>
               <div className="md:col-span-6">
                 <div className="mb-2">
                   <Label htmlFor="pais" value="País" />
-                  <TextInput defaultValue="" type="text" {...register("Pais", { required: true })} />
+                  <TextInput defaultValue="" type="text" required={true} {...register("Pais")} />
                 </div>
                 <Label htmlFor="descripcion" value="Domicilio" />
-                <Textarea defaultValue="" rows={1} {...register("Descripcion", { required: true })} />
+                <Textarea defaultValue="" rows={1}  required={true} {...register("Descripcion")} />
               </div>
             </div>
 
@@ -247,6 +259,7 @@ export const Proveedores = () => {
               Cancelar
             </Button>
           </Modal.Footer>
+          </form>
         </Modal>
       </div>
     </>

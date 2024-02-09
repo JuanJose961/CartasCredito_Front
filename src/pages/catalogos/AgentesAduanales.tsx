@@ -65,6 +65,15 @@ export const AgentesAduanales = () => {
 
   /* EVENT HANDLERS */
   const _handleShowModal = useCallback(() => {
+    setEditId(0);
+    setValue("Nombre", "");
+    setValue("Descripcion", "");
+    // setValue("Contacto.Nombre", "");
+    // setValue("Contacto.ApellidoPaterno", "");
+    // setValue("Contacto.ApellidoMaterno", "");
+    // setValue("Contacto.Telefono", "");
+    // setValue("Contacto.Email", "");
+    // setValue("Contacto.Fax", "");
     setShowAddForm(true);
   }, [showAddForm]);
 
@@ -261,7 +270,7 @@ export const AgentesAduanales = () => {
                 </div>
               </div>
 
-              <hr className="my-2" />
+              {/* <hr className="my-2" />
 
               <Label value="CONTACTO" className="opacity-60" />
 
@@ -290,7 +299,7 @@ export const AgentesAduanales = () => {
                   <Label htmlFor="Fax" value="Fax" />
                   <TextInput type="text" {...register("Contacto.Fax")} />
                 </div>
-              </div>
+              </div> */}
             </Modal.Body>
             <Modal.Footer>
               <FButton type="submit">Guardar</FButton>

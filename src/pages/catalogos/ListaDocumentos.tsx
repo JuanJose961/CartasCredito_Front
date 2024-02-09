@@ -36,6 +36,9 @@ export const ListaDocumentos = () => {
   }, [editId, nombre, descripcion]);
 
   const _handleShowModal = useCallback(() => {
+    setEditId(0);
+    setNombre("");
+    setDescripcion("");
     setShowAddForm(true);
   }, [showAddForm]);
 
